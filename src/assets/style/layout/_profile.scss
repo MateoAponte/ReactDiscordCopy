@@ -1,0 +1,42 @@
+.profile {
+  width: 250px;
+  height: 52px;
+  background-color: var(--user-panel-color);
+  display: flex;
+  padding: 0px 8px;
+  align-items: center;
+
+  &__avatar {
+    width: 32px;
+    height: 32px;
+    position: relative;
+    .profile__image {
+      height: 100%;
+      width: 100%;
+      border-radius: 100%;
+      background-color: azure;
+    }
+    .profile__status {
+      width: 10px;
+      height: 10px;
+      bottom: -1px;
+      right: -1px;
+      position: absolute;
+      border-radius: 100%;
+      background-color: #23a55a;
+    }
+  }
+  &__status {
+  }
+  &__info {
+  }
+  &__nickname {
+  }
+  &__id {
+  }
+  &__properties {
+    display: flex;
+  }
+  &__icon {
+  }
+}

@@ -1,0 +1,11 @@
+.left-panel {
+  width: 240px;
+  height: 100%;
+  background-color: var(--sidebar-secundary-color);
+  display: flex;
+  flex-direction: column;
+
+  &__content {
+    height: 100%;
+  }
+}

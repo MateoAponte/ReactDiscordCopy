@@ -1,17 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { HashRouter } from 'react-router-dom';
+import { applyMiddleware, compose, legacy_createStore } from 'redux';
+
+import { UserContextProvider } from './context/UserContext.js';
+import { asynchronic } from './middlewares/asynchronic.js';
+import thunk from 'redux-thunk';
+
+import { rootReducer } from './services/reducers/root.js';
+
+import App from './App.jsx';
+
+import './assets/style/_index.scss';
+
+import { Provider } from 'react-redux';
+const composeEnhancers = compose(applyMiddleware(thunk, asynchronic));
+
+const store = legacy_createStore(rootReducer, composeEnhancers);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <UserContextProvider>
+      <HashRouter>
+        <Provider store={store}>
+          <App />
+        </Provider>
+      </HashRouter>
+    </UserContextProvider>
+  </React.StrictMode>,
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

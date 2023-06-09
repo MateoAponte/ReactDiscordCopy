@@ -1,0 +1,23 @@
+@mixin dark-theme {
+  --sidebar-color: #1e1f22;
+  --container-color: #313338;
+  --user-panel-color: #232428;
+  --sidebar-secundary-color: #2b2d31;
+  --placeholder-color: #383a40;
+  --channel-color: #7a7e87;
+  --friends-color: #7a7e87;
+  --letter-color: #6b6d76;
+  --blue-color: #404783;
+}
+
+@mixin light-theme {
+  --sidebar-color: #4f77ec;
+  --container-color: #313338;
+  --user-panel-color: #232428;
+  --sidebar-secundary-color: #2b2d31;
+  --placeholder-color: #383a40;
+  --channel-color: #7a7e87;
+  --friends-color: #7a7e87;
+  --letter-color: #6b6d76;
+  --blue-color: #404783;
+}
