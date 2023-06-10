@@ -1,17 +1,13 @@
 import React, { useState } from 'react';
 
 const SidebarIcon = ({ children, handleClick }) => {
-  const [isActive, setIsActive] = useState('isActive');
+  const [isActive, setIsActive] = useState(false);
 
   return (
-    <div
-      className={['sidebar__icon', isActive && 'sidebar__icon--is-active']}
-      onClick={handleClick}
-      onMouseOver={setIsActive(true)}
-      onMouseLeave={() => {
-        setIsActive(false);
-      }}>
-      {children}
+    <div className={`sidebar__item ${isActive ? 'sidebar__item--is-active' : ''}`}>
+      <div className="sidebar__icon" onClick={handleClick} onMouseOver={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}>
+        {children}
+      </div>
     </div>
   );
 };
