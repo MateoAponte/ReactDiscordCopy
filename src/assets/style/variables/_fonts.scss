@@ -1,0 +1,25 @@
+@mixin fontWhitney($type, $weight) {
+  font-display: swap;
+  font-family: 'whitney-' + $type;
+  font-weight: $weight;
+  src: url('../../fonts/whitney/whitney' + $type + '.otf') format('truetype');
+}
+
+$fonts: (
+  'bold': 800,
+  'semibold': 600,
+  'medium': 500,
+  'book': 400,
+  'light': 200,
+);
+$fontFace: '@font-face';
+
+@each $name, $value in $fonts {
+  @font-face {
+    @include fontWhitney($name, $value);
+  }
+}
+
+* {
+  font-family: 'whitney-medium';
+}

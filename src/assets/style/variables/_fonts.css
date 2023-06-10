@@ -1,0 +1,25 @@
+@font-face {
+  font-display: swap;
+  font-family: "whitney-bold";
+  font-weight: 800;
+  src: url("../../fonts/whitney/whitneybold.otf") format("truetype");
+  font-display: swap;
+  font-family: "whitney-semibold";
+  font-weight: 600;
+  src: url("../../fonts/whitney/whitneysemibold.otf") format("truetype");
+  font-display: swap;
+  font-family: "whitney-medium";
+  font-weight: 500;
+  src: url("../../fonts/whitney/whitneymedium.otf") format("truetype");
+  font-display: swap;
+  font-family: "whitney-book";
+  font-weight: 400;
+  src: url("../../fonts/whitney/whitneybook.otf") format("truetype");
+  font-display: swap;
+  font-family: "whitney-light";
+  font-weight: 200;
+  src: url("../../fonts/whitney/whitneylight.otf") format("truetype");
+}
+* {
+  font-family: "whitney-book";
+}

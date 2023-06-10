@@ -56,10 +56,10 @@ const Sidebar = () => {
         );
       })}
       <SidebarIcon name="Create your server" handleClick={() => showModal()}>
-        <InteractionIcon name={'C'} />
+        <InteractionIcon name={'+'} />
       </SidebarIcon>
       <SidebarIcon name="Explore channels" handleClick={() => navigateTo('/messager')}>
-        <InteractionIcon name={'+'} />
+        <InteractionIcon name={'E'} />
       </SidebarIcon>
     </div>
   );
